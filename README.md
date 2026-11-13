@@ -26,7 +26,8 @@ We predict the **probability that the passenger is satisfied**.
 
 ## Repository structure
 ```
-data/            competition CSVs (not committed — download from Kaggle)
+data/            competition CSVs (train, test, sample_submission — committed for
+                 convenience; the original source is the Kaggle competition page)
 src/preprocess.py  shared cleaning, encoding and scaling
 notebooks/
   01_data_eda.ipynb                 data description, EDA, missing values & anomalies
@@ -40,8 +41,10 @@ report/          intermediate status report slides
 ## How to run
 ```bash
 pip install -r requirements.txt
-kaggle competitions download -c playground-series-s6e10 -p data && unzip data/*.zip -d data
+# the CSVs are already in data/. To re-download them from Kaggle instead:
+# kaggle competitions download -c playground-series-s6e10 -p data && unzip data/*.zip -d data
 # run notebooks 01 → 02 → 03 from the notebooks/ folder
+# (they overwrite figures/ and submissions/)
 ```
 
 ## Current results (5-fold stratified CV, ROC AUC)
