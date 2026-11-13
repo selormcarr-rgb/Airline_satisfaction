@@ -1,0 +1,6 @@
+model,OOF AUC,fold mean,fold std,"time, s"
+Constant (class prior),0.5,0.5,0.0,0.0
+Rule: Online boarding rating,0.84039,0.8404,0.00112,0.0
+Rule: Business class + boarding,0.88019,0.88019,0.00112,0.0
+Logistic regression,0.93682,0.93683,0.0005,7.6
+LightGBM,0.95867,0.95867,0.00073,73.3
